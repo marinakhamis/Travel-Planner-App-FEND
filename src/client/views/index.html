@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travilizer | Travel planner app</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="nav" id="nav" role="navigation">
+      <div class="logo" id="logo">
+        Travelizier <i class="fa fa-plane"></i>
+      </div>
+      <ul>
+        <li><a class="nav-item" href="#form">Start planning</a></li>
+        <li><a class="nav-item" href="#contact-us">Contact us</a></li>
+      </ul>
+    </nav>
+    <div class="intro">
+      <h1 class="animation">Travel planner app</h1>
+      <a class="start" href="#form">Start planning</a>
+    </div>
+
+  </header>
+
+  <main>
+
+    <section class="form" id="form">
+      <p class="start-planning"> Start planning now </p>
+      <div class="your-trip-to">
+        <h5>Your Trip to:</h5>
+        <input type="text" name="city" id="city" placeholder="Destination">
+      </div>
+      <div class="your-departure-date">
+        <h5> Depature Date: </h5>
+        <input type="date" name="date" id="date">
+      </div>
+      <div class="generate-div">
+        <p id="error"></p>
+        <button class="btn" id="generate"> <i class="fa fa-plus-circle"></i> Generate</button>
+      </div>
+    </section>
+
+    <section class="results" id="results">
+      <div class="country-info">
+        <h3 id="title">About The country</h3>
+        <img src="" alt="country flag" id="flag">
+        <p id="about-country"> </p>
+      </div>
+
+      <div class="city-info">
+        <img src="" alt="location image" id="city-image">
+        <div>
+          <p class="small-p"> Trip to </p>
+          <p id="destination" class="big-p">Plan Your Trip to any Location </p>
+          <p id="dep-date" class="small-p">Enter Your Depature date</p>
+          <p id="weather" class="small-p"> Get weather forecast to that Location</p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer id="contact-us">
+          <span>About Travelizer <i class="fa fa-plane"></i></span>	
+          <p>	We offer you the expected weather for the city you're going to and we present a count down to your trip</p>
+				<div class="footer-icons">
+					<a href="https://www.facebook.com/rena.khames/"><i class="fa fa-facebook"></i></a>
+        <a href="https://github.com/marinakhamis"><i class="fa fa-github"> </i> </a>
+          <a href="https://www.linkedin.com/in/marina-khamis-140941165/"><i class="fa fa-linkedin"></i></a>
+				</div>
+  </footer>
+
+  <!--register the service workers-->
+  <script>
+    //check if they are supported
+    if ('servicWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/servive-worker.js');
+      })
+    }
+  </script>
+
+</body>
+</html>

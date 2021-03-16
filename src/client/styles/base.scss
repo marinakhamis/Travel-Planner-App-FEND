@@ -1,0 +1,13 @@
+@import './variables.scss'; 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: $kindof-black;
+    main {
+    flex: 2;
+    section {
+        margin: 50px auto;
+    }
+}  
+}

@@ -1,0 +1,12 @@
+//Adding animation to the " Travel planner app " word 
+@-webkit-keyframes typing { from { width: 0; } }
+.animation { 
+	border-right: .1em solid black;
+	width: 16.5em; 
+	width: 20ch;
+	margin: auto;
+	white-space: nowrap;
+	overflow: hidden;
+    -webkit-animation: typing 5s steps(25, end),
+    blink-caret .2s step-end infinite alternate;
+}
